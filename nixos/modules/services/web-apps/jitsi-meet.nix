@@ -218,8 +218,8 @@ in
           name = "Jitsi Meet MUC";
           roomLocking = false;
           roomDefaultPublicJids = true;
+          restrictRoomCreation = true;
           extraConfig = ''
-            restrict_room_creation = true
             storage = "memory"
             admins = { "focus@auth.${cfg.hostName}" }
           '';
@@ -229,8 +229,8 @@ in
           name = "Jitsi Meet Breakout MUC";
           roomLocking = false;
           roomDefaultPublicJids = true;
+          restrictRoomCreation = true;
           extraConfig = ''
-            restrict_room_creation = true
             storage = "memory"
             admins = { "focus@auth.${cfg.hostName}" }
           '';
@@ -251,8 +251,8 @@ in
           name = "Jitsi Meet Lobby MUC";
           roomLocking = false;
           roomDefaultPublicJids = true;
+          restrictRoomCreation = true;
           extraConfig = ''
-            restrict_room_creation = true
             storage = "memory"
           '';
         }
@@ -329,7 +329,6 @@ in
           conference_duration_component = "conferenceduration.${cfg.hostName}"
           end_conference_component = "endconference.${cfg.hostName}"
 
-          c2s_require_encryption = false
           lobby_muc = "lobby.${cfg.hostName}"
           breakout_rooms_muc = "breakout.${cfg.hostName}"
           room_metadata_component = "metadata.${cfg.hostName}"
